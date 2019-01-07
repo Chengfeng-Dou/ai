@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>快速风格融合</title>
+    <link rel="stylesheet" th:href="@{bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+    <h1>结果图片</h1>
+    <div class="text-center">
+        <img th:src="${output}">
+        <div class="clear clearfix"></div>
+    </div>
+    <div>
+        <a th:href="@{/}" class="btn btn-primary btn-block">返回</a>
+    </div>
+</body>
+
+<script type="text/javascript" th:src="@{jquery/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript" th:src="@{bootstrap/js/bootstrap.min.js}"></script>
+</html>

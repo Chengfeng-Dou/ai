@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>快速风格融合</title>
+    <link rel="stylesheet" th:href="@{bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{fileinput/css/fileinput.min.css}">
+</head>
+<body>
+
+<div style="margin-bottom: 20px">
+    <h2 class="text-center">请上传内容图片和风格图片</h2>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <label class="control-label">内容图片</label>
+        <input id="content-image" type="file" class="file fileloading"
+               data-allowed-file-extensions='["jpg","png"]'
+               data-language="zh" name="file"/>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <label class="control-label">风格图片</label>
+        <input id="style-image" type="file" class="file fileloading"
+               data-allowed-file-extensions='["jpg","png"]'
+               data-language="zh" name="file"/>
+    </div>
+
+
+    <div class="clearfix clear"></div>
+
+</div>
+
+<form style="width:80%; margin: 0 auto" method="post" th:action="@{/getResult}">
+    <input class="btn btn-block btn-primary" type="submit">生成图片
+</form>
+
+</body>
+
+<script type="text/javascript" th:src="@{jquery/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript" th:src="@{bootstrap/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{fileinput/js/fileinput.min.js}"></script>
+<script type="text/javascript" th:src="@{fileinput/js/locales/zh.js}"></script>
+<script type="text/javascript" th:src="@{upload.js}"></script>
+
+</html>
